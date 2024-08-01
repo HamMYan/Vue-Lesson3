@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>If - Else condition</h1>
+        <hr><br><br><br>
+
+        <h3>If else</h3>
+        <p v-if="text">
+            Text is true
+        </p>
+        <p v-else>
+            Text is false
+        </p>
+        <hr>
+        <br>
+
+        <h3>Conditions</h3>
+        <p v-if="number > 2">
+            {{number}} is greater than 2
+        </p>
+        <p v-else-if="number == 2">
+            Number is 2
+        </p>
+        <p v-else>
+            {{number}} is less than 2
+        </p>
+        <hr>
+        <br>
+
+        <h3>Use The Return Value from a Function</h3>
+        <p v-if="text2.includes('pizza')">
+            The text includes the word 'pizza'
+            <br>
+            <img width="100px" src="https://logowik.com/content/uploads/images/pizza1543.logowik.com.webp">
+        </p>
+        <p v-else>
+            The text does not include the word "pizza".
+        </p>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    text: true,
+                    text2: "I like taco, pizza, Thai beef salad, pho soup and tagine.",
+                    number: 2
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
+</body>
+
+</html>
